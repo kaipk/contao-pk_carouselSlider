@@ -1,0 +1,56 @@
+#carouselControl {
+	text-align: center;
+	clear: both;
+	margin-left: 15px;
+}
+
+#prev {
+    background: url("prev.png") no-repeat scroll left top transparent;
+    height: 20px;
+    left: 10px;
+    position: absolute;
+    top: 160px;
+    width: 20px;
+    text-indent: -9999px;
+    display: inline-block;
+	cursor: pointer;
+}
+
+#next {
+    background: url("next.png") no-repeat scroll left top transparent;
+    height: 20px;
+    left: 645px;
+    position: absolute;
+    top: 160px;
+    width: 20px;
+    text-indent: -9999px;
+    display: inline-block;
+	cursor: pointer;
+}
+
+.handles_more a {
+	background: url("point.png") no-repeat scroll left top transparent;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 0;
+    height: 7px;
+    line-height: 0;
+    padding: 0;
+    text-indent: -9999px;
+    width: 7px;
+ 	
+}
+.handles_more a.selected, #handles_more a:hover {
+    background: url("point_active.png") no-repeat scroll left top transparent;
+}
+
+.ce_carouselslider_container {
+	margin-left:20px;
+	position: relative;
+	overflow: hidden;
+}
+.ce_carouselSlider_section {
+
+	position: relative;
+	display: inline-block;
+}

@@ -1,0 +1,11 @@
+=============================
+Contao Extension "pk_carouselSlider"
+=============================
+
+Version 1.0.0 stable (2011-09-27)
+---------------------------------
+- Initial release
+- css and js compression
+
+Version 1.0.1 stable (2012-05-01)
+- number of elements were not considered
