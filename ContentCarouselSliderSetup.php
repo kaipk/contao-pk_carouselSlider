@@ -51,7 +51,7 @@ class ContentCarouselSliderSetup extends ContentElement
 		$objArticle = $this->Database->execute("SELECT tl_article.*, COUNT(tl_content.id) AS sections FROM tl_content LEFT JOIN tl_article ON tl_content.pid=tl_article.id WHERE tl_content.type='carouselSlider_section' AND tl_content.pid={$this->pid} GROUP BY tl_content.pid");
 		
 		$cssID = deserialize($objArticle->cssID, true);
-		$GLOBALS['CAROUSELSLIDER'][$this->pid]['id'] = $cssID[0] != '' ? $cssID[0] : $objArticle->alias;
+		$GLOBALS['CAROUSELSLIDER'][$this->pid]['id'] = $cssID[0] != '' ? $cssID[0] : standardize($objArticle->alias);
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['sections'] = 0;
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['total'] = (int)$objArticle->sections;
 		
