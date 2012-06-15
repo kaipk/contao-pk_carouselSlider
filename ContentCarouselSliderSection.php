@@ -51,7 +51,7 @@
 		
 		$strBuffer = parent::generate();
 		
-		// Start the powerslide container
+		// Start the carouselslider container
 		if ($GLOBALS['CAROUSELSLIDER'][$this->pid]['sections'] == 1)
 		{
 			$strBuffer = '<div class="ce_carouselslider_container" style="width:'.$GLOBALS['CAROUSELSLIDER'][$this->pid]['width'].'px;height:'.$GLOBALS['CAROUSELSLIDER'][$this->pid]['height'].'px">' . $strBuffer;
@@ -104,7 +104,7 @@
 			$this->Template->target = ($objPage->outputFormat == 'html5') ? ' target="_blank"' : ' onclick="window.open(this.href); return false;"';
 		}
 		
-		$GLOBALS['CAROUSELSLIDER'][$this->pid]['sectionLink'] = $this->powerslide_url == '' ? false : true;
+		$GLOBALS['CAROUSELSLIDER'][$this->pid]['sectionLink'] = $this->carouselSlider_url == '' ? false : true;
 		$this->Template->openLink = $GLOBALS['CAROUSELSLIDER'][$this->pid]['sectionLink'];
 	}
 }
