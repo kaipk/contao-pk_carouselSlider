@@ -52,8 +52,21 @@ window.addEvent('domready', function () {
 			transition: 'sine:out',
 			duration: duration
 		},
-	})
-})
+	});
+	
+	<?php if($this->mooSwipe): ?>
+	new MooSwipe(document.getElement('#<?php echo $this->articleId; ?> .ce_carouselslider_container'), {
+		onSwipeLeft: function() {
+			carousel.next();
+			
+		},
+		onSwipeRight: function() {
+			carousel.previous();
+		}
+	});
+	<?php endif; ?>
+	
+});
 //--><!]]>
 </script>
 

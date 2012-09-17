@@ -24,4 +24,5 @@ CREATE TABLE `tl_content` (
   `carouselSlider_background` varchar(255) NOT NULL default '',
   `carouselSlider_url` varchar(255) NOT NULL default '',
   `carouselSlider_target` char(1) NOT NULL default '',
+  `carouselSlider_mooSwipe` char(1) NOT NULL default '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

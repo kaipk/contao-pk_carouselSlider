@@ -64,7 +64,12 @@ class ContentCarouselSliderSetup extends ContentElement
 		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/pk_carouselSlider/html/PeriodicalExecuter.js';
 		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/pk_carouselSlider/html/Carousel.js';
 		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/pk_carouselSlider/html/Carousel.Extra.js';
-		$GLOBALS['TL_CSS'][] = 'system/modules/pk_carouselSlider/html/CarouselSlider.css';
+		$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/pk_carouselSlider/html/class.MooSwipe.packed.js';
+		
+		if($this->carouselSlider_mooSwipe)
+		{
+			$GLOBALS['TL_CSS'][] = 'system/modules/pk_carouselSlider/html/CarouselSlider.css';
+		}
 		
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['buttons'] = $this->carouselSlider_buttons ? true : false;
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['position'] = $this->carouselSlider_position ? true : false;
@@ -78,6 +83,7 @@ class ContentCarouselSliderSetup extends ContentElement
 		$arrSize = deserialize($this->carouselSlider_size, true);
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['width'] = (int)$arrSize[0];
 		$GLOBALS['CAROUSELSLIDER'][$this->pid]['height'] = (int)$arrSize[1];
+		$GLOBALS['CAROUSELSLIDER'][$this->pid]['mooSwipe'] = $this->carouselSlider_mooSwipe ? true : false;
 	}
 }
 

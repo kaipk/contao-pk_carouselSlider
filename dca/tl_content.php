@@ -33,7 +33,7 @@
 /**
  * Palettes
  */
-$GLOBALS['TL_DCA']['tl_content']['palettes']['carouselSlider_setup']		= '{type_legend},type;{carouselSlider_legend},carouselSlider_size,carouselSlider_orientation,carouselSlider_elements,carouselSlider_elementsmargin,carouselSlider_interval,carouselSlider_duration,carouselSlider_autoplay,carouselSlider_buttons,carouselSlider_position;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
+$GLOBALS['TL_DCA']['tl_content']['palettes']['carouselSlider_setup']		= '{type_legend},type;{carouselSlider_legend},carouselSlider_size,carouselSlider_orientation,carouselSlider_elements,carouselSlider_elementsmargin,carouselSlider_interval,carouselSlider_duration,carouselSlider_autoplay,carouselSlider_buttons,carouselSlider_position,carouselSlider_mooSwipe;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
 $GLOBALS['TL_DCA']['tl_content']['palettes']['carouselSlider_section']		= '{type_legend},type;{image_legend},carouselSlider_background;{link_legend:hide},carouselSlider_url,carouselSlider_target;{protected_legend:hide},protected;{expert_legend:hide},guests,cssID,space';
 
@@ -152,3 +152,13 @@ $GLOBALS['TL_DCA']['tl_content']['fields']['carouselSlider_target'] = array
 	'inputType'			=> 'checkbox',
 	'eval'				=> array('tl_class'=>'w50 m12')
 );
+
+$GLOBALS['TL_DCA']['tl_content']['fields']['carouselSlider_mooSwipe'] = array
+(
+  'label'					=> &$GLOBALS['TL_LANG']['tl_content']['carouselSlider_mooSwipe'],
+  'inputType'				=> 'checkbox',
+  'eval'              		=> array('tl_class'=>'w50')
+);
+
+
+

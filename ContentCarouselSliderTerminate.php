@@ -65,6 +65,7 @@
 		$this->Template->autoplay = $GLOBALS['CAROUSELSLIDER'][$this->pid]['autoplay'];
 		$this->Template->orientation = $GLOBALS['CAROUSELSLIDER'][$this->pid]['orientation'];	
 		$this->Template->total = $GLOBALS['CAROUSELSLIDER'][$this->pid]['total'];
+		$this->Template->mooSwipe = $GLOBALS['CAROUSELSLIDER'][$this->pid]['mooSwipe'];
 	}
 }
 
